@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace crud
@@ -12,7 +7,7 @@ namespace crud
     {
         // Cadena de conexión con la base de datos.
         // En mi caso el servidor es PC-I5, debéis cambiarlo por vuestro servidor.
-        static private string cadenaConexion = @"Server=PC-I5\SQLEXPRESS;DataBase=ERP;Integrated Security=true;";
+        static private string cadenaConexion = @"Server=localhost\SQLEXPRESS;DataBase=ERP;Integrated Security=true;";
 
         // Conexión a la base de datos.
         public SqlConnection Connection { get; } = new SqlConnection(cadenaConexion);

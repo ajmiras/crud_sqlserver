@@ -50,13 +50,13 @@
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(10, 51);
-            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(565, 339);
+            this.dataGridView.Size = new System.Drawing.Size(565, 369);
             this.dataGridView.TabIndex = 0;
             // 
             // btnNuevo
@@ -64,7 +64,7 @@
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(70, 10);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(60, 30);
             this.btnNuevo.TabIndex = 1;
@@ -77,7 +77,7 @@
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnEditar.Location = new System.Drawing.Point(130, 10);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(60, 30);
             this.btnEditar.TabIndex = 2;
@@ -90,7 +90,7 @@
             this.btnBorrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBorrar.Font = new System.Drawing.Font("Wingdings", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnBorrar.Location = new System.Drawing.Point(200, 10);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(60, 30);
             this.btnBorrar.TabIndex = 3;
@@ -103,7 +103,7 @@
             this.btnRecargar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRecargar.Font = new System.Drawing.Font("Webdings", 14F);
             this.btnRecargar.Location = new System.Drawing.Point(10, 10);
-            this.btnRecargar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecargar.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(60, 30);
             this.btnRecargar.TabIndex = 4;
@@ -115,8 +115,8 @@
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.Location = new System.Drawing.Point(471, 398);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir.Location = new System.Drawing.Point(471, 428);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(100, 30);
             this.btnSalir.TabIndex = 5;
@@ -130,7 +130,7 @@
             this.btnUltimo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUltimo.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnUltimo.Location = new System.Drawing.Point(515, 10);
-            this.btnUltimo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUltimo.Margin = new System.Windows.Forms.Padding(4);
             this.btnUltimo.Name = "btnUltimo";
             this.btnUltimo.Size = new System.Drawing.Size(60, 30);
             this.btnUltimo.TabIndex = 6;
@@ -144,7 +144,7 @@
             this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSiguiente.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnSiguiente.Location = new System.Drawing.Point(455, 10);
-            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSiguiente.Margin = new System.Windows.Forms.Padding(4);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(60, 30);
             this.btnSiguiente.TabIndex = 7;
@@ -158,7 +158,7 @@
             this.btnPrimero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrimero.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnPrimero.Location = new System.Drawing.Point(335, 10);
-            this.btnPrimero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrimero.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrimero.Name = "btnPrimero";
             this.btnPrimero.Size = new System.Drawing.Size(60, 30);
             this.btnPrimero.TabIndex = 9;
@@ -172,7 +172,7 @@
             this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnterior.Font = new System.Drawing.Font("Webdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnAnterior.Location = new System.Drawing.Point(395, 10);
-            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAnterior.Margin = new System.Windows.Forms.Padding(4);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(60, 30);
             this.btnAnterior.TabIndex = 8;
@@ -185,7 +185,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(584, 441);
+            this.ClientSize = new System.Drawing.Size(584, 471);
             this.Controls.Add(this.btnPrimero);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnSiguiente);
@@ -199,7 +199,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(600, 480);
             this.Name = "FPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

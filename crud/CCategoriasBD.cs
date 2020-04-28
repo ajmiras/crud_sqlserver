@@ -45,8 +45,6 @@ namespace crud
             }
             finally
             {
-                sqlCommand.Parameters.Clear();
-
                 sqlDataReader.Close();
 
                 conexionBD.Cerrar();

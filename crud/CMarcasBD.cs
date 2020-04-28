@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -13,7 +9,6 @@ namespace crud
         private CConexionBD conexionBD = new CConexionBD();
         private SqlCommand sqlCommand = new SqlCommand();
         private SqlDataReader sqlDataReader;
-
 
         public int Marca_id { get; set; }
         public String Marca { get; set; }
@@ -51,8 +46,6 @@ namespace crud
             }
             finally
             {
-                sqlCommand.Parameters.Clear();
-
                 sqlDataReader.Close();
                 
                 conexionBD.Cerrar();
