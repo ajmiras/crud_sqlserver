@@ -97,8 +97,8 @@ namespace crud
                     Producto_id = productosBD.Producto_id;
                 }
                 else
-                { 
-                    MessageBox.Show("Al insertar el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    MessageBox.Show("Al insertar el producto.\n" + productosBD.Error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     // Si no se ha podido insertar, devolvemos Cancel. 
                     DialogResult = DialogResult.Cancel;

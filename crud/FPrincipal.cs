@@ -102,7 +102,7 @@ namespace crud
                 }
                 else
                     // Sino se ha podido borrar, mensaje de error.
-                    MessageBox.Show("Al borrar el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Al borrar el producto.\nRefresque los productos para continuar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

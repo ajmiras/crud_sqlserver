@@ -24,6 +24,7 @@ namespace crud
         public String Producto { get; set; }
         public double Precio { get; set; }
         public int Codigo { get; set; }
+        public string Error { get; set; }
 
         public DataTable Seleccionar(int producto_id = 0)
         {
@@ -32,7 +33,7 @@ namespace crud
 
             try
             {
-                // Realizamos la conexión.
+                //// Realizamos la conexión.
                 conexionBD.Abrir();
 
                 // Y se la asignamos al comando SQL.
@@ -103,6 +104,8 @@ namespace crud
             // Para devolver si la operación se hizo correctamente, o no.
             bool bInsertada = false;
 
+            Error = "";
+
             try
             {
                 // Es similar a la selección, salvo la sentencia SQL.
@@ -131,6 +134,8 @@ namespace crud
             }
             catch (Exception ex)
             {
+                Error = "Código duplicado.\n\n" + ex.Message;
+
                 bInsertada = false;
             }
             finally
@@ -164,6 +169,8 @@ namespace crud
             }
             catch(Exception ex)
             {
+                Error = "Código duplicado.\n\n" + ex.Message;
+
                 bEditada = false;
             }
             finally

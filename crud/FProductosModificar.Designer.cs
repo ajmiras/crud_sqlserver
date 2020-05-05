@@ -62,7 +62,7 @@
             // 
             this.Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancelar.Location = new System.Drawing.Point(263, 236);
+            this.Cancelar.Location = new System.Drawing.Point(262, 236);
             this.Cancelar.Margin = new System.Windows.Forms.Padding(5);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(100, 30);
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 280);
+            this.ClientSize = new System.Drawing.Size(376, 280);
             this.ControlBox = false;
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
