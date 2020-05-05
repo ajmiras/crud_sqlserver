@@ -40,13 +40,15 @@
             this.cbCategorias = new System.Windows.Forms.ComboBox();
             this.cbMarcas = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new System.Windows.Forms.NumericUpDown();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrecio)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAceptar
             // 
             this.btnAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnAceptar.Location = new System.Drawing.Point(14, 218);
+            this.btnAceptar.Location = new System.Drawing.Point(14, 236);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(5);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(100, 30);
@@ -60,7 +62,7 @@
             // 
             this.Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancelar.Location = new System.Drawing.Point(263, 218);
+            this.Cancelar.Location = new System.Drawing.Point(263, 236);
             this.Cancelar.Margin = new System.Windows.Forms.Padding(5);
             this.Cancelar.Name = "Cancelar";
             this.Cancelar.Size = new System.Drawing.Size(100, 30);
@@ -80,7 +82,7 @@
             // 
             // txtProducto
             // 
-            this.txtProducto.Location = new System.Drawing.Point(115, 64);
+            this.txtProducto.Location = new System.Drawing.Point(115, 96);
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.Size = new System.Drawing.Size(233, 22);
             this.txtProducto.TabIndex = 0;
@@ -97,7 +99,7 @@
             // lblProducto
             // 
             this.lblProducto.AutoSize = true;
-            this.lblProducto.Location = new System.Drawing.Point(34, 67);
+            this.lblProducto.Location = new System.Drawing.Point(34, 99);
             this.lblProducto.Name = "lblProducto";
             this.lblProducto.Size = new System.Drawing.Size(62, 16);
             this.lblProducto.TabIndex = 14;
@@ -106,7 +108,7 @@
             // LblCategoria
             // 
             this.LblCategoria.AutoSize = true;
-            this.LblCategoria.Location = new System.Drawing.Point(34, 95);
+            this.LblCategoria.Location = new System.Drawing.Point(34, 127);
             this.LblCategoria.Name = "LblCategoria";
             this.LblCategoria.Size = new System.Drawing.Size(67, 16);
             this.LblCategoria.TabIndex = 15;
@@ -115,7 +117,7 @@
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(35, 125);
+            this.lblMarca.Location = new System.Drawing.Point(35, 157);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(46, 16);
             this.lblMarca.TabIndex = 16;
@@ -124,7 +126,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(35, 154);
+            this.lblPrecio.Location = new System.Drawing.Point(35, 186);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(47, 16);
             this.lblPrecio.TabIndex = 17;
@@ -134,7 +136,7 @@
             // 
             this.cbCategorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategorias.FormattingEnabled = true;
-            this.cbCategorias.Location = new System.Drawing.Point(115, 92);
+            this.cbCategorias.Location = new System.Drawing.Point(115, 124);
             this.cbCategorias.Name = "cbCategorias";
             this.cbCategorias.Size = new System.Drawing.Size(175, 24);
             this.cbCategorias.TabIndex = 1;
@@ -143,7 +145,7 @@
             // 
             this.cbMarcas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMarcas.FormattingEnabled = true;
-            this.cbMarcas.Location = new System.Drawing.Point(115, 122);
+            this.cbMarcas.Location = new System.Drawing.Point(115, 154);
             this.cbMarcas.Name = "cbMarcas";
             this.cbMarcas.Size = new System.Drawing.Size(175, 24);
             this.cbMarcas.TabIndex = 2;
@@ -156,7 +158,7 @@
             0,
             0,
             131072});
-            this.txtPrecio.Location = new System.Drawing.Point(115, 152);
+            this.txtPrecio.Location = new System.Drawing.Point(115, 184);
             this.txtPrecio.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -167,12 +169,30 @@
             this.txtPrecio.TabIndex = 3;
             this.txtPrecio.ThousandsSeparator = true;
             // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(34, 68);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(52, 16);
+            this.lblCodigo.TabIndex = 18;
+            this.lblCodigo.Text = "Código";
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(115, 68);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(100, 22);
+            this.txtCodigo.TabIndex = 19;
+            // 
             // FProductosModificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(377, 262);
+            this.ClientSize = new System.Drawing.Size(377, 280);
             this.ControlBox = false;
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.cbMarcas);
             this.Controls.Add(this.cbCategorias);
@@ -214,5 +234,7 @@
         private System.Windows.Forms.ComboBox cbMarcas;
         private System.Windows.Forms.NumericUpDown txtPrecio;
         private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.TextBox txtCodigo;
     }
 }

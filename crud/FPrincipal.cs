@@ -168,8 +168,11 @@ namespace crud
             // La columna con los precios la mostramos formateada como moneda (currency)...
             dataGridView.Columns["Precio"].DefaultCellStyle.Format = "c";
 
-            // y la alineamos a la derecha.
+            // La alineamos a la derecha.
             dataGridView.Columns["Precio"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+            // y la alineamos a la derecha.
+            dataGridView.Columns["Código"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             // Si hay algún valor null, lo mostraremos con tres guiones.
             dataGridView.DefaultCellStyle.NullValue = "---";
@@ -230,6 +233,16 @@ namespace crud
 
             // Nos posicionamos en la fila del DataGridView.
             dataGridView.CurrentCell = dataGridView[1, rowIndex];
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            // Gestión de la categoría.
+        }
+
+        private void btnMarcas_Click(object sender, EventArgs e)
+        {
+            // Gestión de las marcas.
         }
     }
 }

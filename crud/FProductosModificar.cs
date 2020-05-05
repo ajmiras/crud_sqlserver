@@ -47,6 +47,9 @@ namespace crud
                 // Mostramos la clave primaria.
                 txtId.Text = Convert.ToString(productosBD.Producto_id);
 
+                // El código.
+                txtCodigo.Text = Convert.ToString(productosBD.Codigo);
+
                 // El nombre del producto.
                 txtProducto.Text = productosBD.Producto;
 
@@ -79,6 +82,7 @@ namespace crud
             CProductosBD productosBD = new CProductosBD();
 
             // Le pasamos a cada una de las propiedades los valores correspondientes.
+            productosBD.Codigo = Convert.ToInt32(txtCodigo.Text);
             productosBD.Producto = txtProducto.Text;
             productosBD.Categoria_id = (int)cbCategorias.SelectedValue;
             productosBD.Marca_id = (int)cbMarcas.SelectedValue;
@@ -123,6 +127,14 @@ namespace crud
             if (txtProducto.Text == "")
             {
                 MessageBox.Show("Debe indicar el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtProducto.Focus();
+
+                return false;
+            }
+
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("Debe indicar el código del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtProducto.Focus();
 
                 return false;

@@ -39,6 +39,8 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.btnPrimero = new System.Windows.Forms.Button();
             this.btnAnterior = new System.Windows.Forms.Button();
+            this.btnCategorias = new System.Windows.Forms.Button();
+            this.btnMarcas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +64,7 @@
             // btnNuevo
             // 
             this.btnNuevo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(70, 10);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
@@ -180,12 +182,40 @@
             this.btnAnterior.UseVisualStyleBackColor = true;
             this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
+            // btnCategorias
+            // 
+            this.btnCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCategorias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCategorias.Location = new System.Drawing.Point(10, 428);
+            this.btnCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCategorias.Name = "btnCategorias";
+            this.btnCategorias.Size = new System.Drawing.Size(100, 30);
+            this.btnCategorias.TabIndex = 10;
+            this.btnCategorias.Text = "Categorías";
+            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
+            // 
+            // btnMarcas
+            // 
+            this.btnMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMarcas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMarcas.Location = new System.Drawing.Point(118, 428);
+            this.btnMarcas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMarcas.Name = "btnMarcas";
+            this.btnMarcas.Size = new System.Drawing.Size(100, 30);
+            this.btnMarcas.TabIndex = 11;
+            this.btnMarcas.Text = "Marcas";
+            this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
+            // 
             // FPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(584, 471);
+            this.Controls.Add(this.btnMarcas);
+            this.Controls.Add(this.btnCategorias);
             this.Controls.Add(this.btnPrimero);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnSiguiente);
@@ -222,6 +252,8 @@
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnPrimero;
         private System.Windows.Forms.Button btnAnterior;
+        private System.Windows.Forms.Button btnCategorias;
+        private System.Windows.Forms.Button btnMarcas;
     }
 }
 

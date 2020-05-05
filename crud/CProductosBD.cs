@@ -23,6 +23,7 @@ namespace crud
         public String Marca { get; set; }
         public String Producto { get; set; }
         public double Precio { get; set; }
+        public int Codigo { get; set; }
 
         public DataTable Seleccionar(int producto_id = 0)
         {
@@ -44,7 +45,7 @@ namespace crud
                 if (producto_id == 0)
                 {
                     sqlCommand.CommandText =
-                        "SELECT producto_id AS Id, producto AS Producto, categorias.categoria AS Categoría, marcas.marca AS Marca, precio AS Precio" +
+                        "SELECT producto_id AS Id, codigo AS Código, producto AS Producto, categorias.categoria AS Categoría, marcas.marca AS Marca, precio AS Precio" +
                         " FROM productos" +
                         " INNER JOIN categorias ON productos.categoria_id = categorias.categoria_id" +
                         " INNER JOIN marcas ON productos.marca_id = marcas.marca_id" +
@@ -54,7 +55,7 @@ namespace crud
                 {
                     // En caso contrario un producto en concreto.
                     sqlCommand.CommandText =
-                        "SELECT producto_id AS Id, producto AS Producto, productos.categoria_id, categorias.categoria AS Categoría, productos.marca_id, marcas.marca AS Marca, precio AS Precio" +
+                        "SELECT producto_id AS Id, codigo AS Código, producto AS Producto, productos.categoria_id, categorias.categoria AS Categoría, productos.marca_id, marcas.marca AS Marca, precio AS Precio" +
                         " FROM productos" +
                         " INNER JOIN categorias ON productos.categoria_id = categorias.categoria_id" +
                         " INNER JOIN marcas ON productos.marca_id = marcas.marca_id" +
@@ -81,6 +82,7 @@ namespace crud
                     Marca_id = Convert.ToInt32(rows[0]["marca_id"].ToString());
                     Marca = rows[0]["marca"].ToString();
                     Precio = Convert.ToDouble(rows[0]["precio"].ToString());
+                    Codigo = Convert.ToInt32(rows[0]["código"].ToString());
                 }
             }
             finally
@@ -114,8 +116,8 @@ namespace crud
                 // El producto, al ser una cadena, se ha puesto entre comillas ('{2}').
                 // En el Precio hay que cambiar la coma (,) por un punto (.) para poder guardarlo en la tabla.
                 sqlCommand.CommandText =
-                    string.Format("INSERT INTO productos VALUES ({0}, {1}, '{2}', {3})",
-                        Categoria_id, Marca_id, Producto, Convert.ToString(Precio).Replace(",", "."));
+                    string.Format("INSERT INTO productos VALUES ({0}, {1}, '{2}', {3}, {4})",
+                        Categoria_id, Marca_id, Producto, Convert.ToString(Precio).Replace(",", "."), Codigo);
 
                 // Ejecutamos la sentencia, indicando que no es una consulta SELECT, y
                 // aprovechamos el número de regisros que nos devuelve. En este caso debe ser 1.
@@ -126,6 +128,10 @@ namespace crud
                 {
                     Producto_id = UltimoId();
                 }
+            }
+            catch (Exception ex)
+            {
+                bInsertada = false;
             }
             finally
             {
@@ -151,10 +157,14 @@ namespace crud
                 // Recordad que el producto, al ser una cadena, va entre comillas ('{2}').
                 // De nuevo hay que tener cuidado con el Precio, hay que cambiar la coma (,) por un punto (.) para poder guardarlo en la tabla. 
                 sqlCommand.CommandText =
-                    string.Format("UPDATE productos SET categoria_id={0}, marca_id={1}, producto='{2}', precio={3} WHERE producto_id={4}",
-                        Categoria_id, Marca_id, Producto, Convert.ToString(Precio).Replace(",", "."), Producto_id);
+                    string.Format("UPDATE productos SET categoria_id={0}, marca_id={1}, producto='{2}', precio={3}, codigo={4} WHERE producto_id={5}",
+                        Categoria_id, Marca_id, Producto, Convert.ToString(Precio).Replace(",", "."), Codigo, Producto_id);
 
                 bEditada = sqlCommand.ExecuteNonQuery() == 1;
+            }
+            catch(Exception ex)
+            {
+                bEditada = false;
             }
             finally
             {
